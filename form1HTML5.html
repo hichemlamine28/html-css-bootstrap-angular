@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+
+<title>Hichem Lamine Premier test CSS</title>
+<style>
+table{
+	margin-right: 35%;
+	margin-left: 35%;
+	width: 30%;
+}	
+td{
+	text-align: center;
+	font-weight: bold;
+}
+.inpt{
+	margin-top: 3px;
+	width: 100%;
+	height: 30px;
+	border-radius: 5px;
+}
+.bt{
+	margin-top: 5px;
+	background-color: orange;
+	font-weight: bolder;
+	color: #ffffff;
+	height: 30px;
+	border-radius: 5px;
+}
+.rs{
+	margin-top: 5px;
+	background-color: red;
+	font-weight: bolder;
+	color: #ffffff;
+	height: 30px;
+	border-radius: 5px;
+}
+</style>
+
+</head>
+<body bgcolor="lightblue">
+
+
+<form>
+<table>	
+<tr><td colspan="2">	<h1>Remplir ce formulaire svp</h1></td></tr>
+<tr><td>Nom: 			</td><td><input type="text" class="inpt" required pattern="[A-Za-z ']{3,25}"  name="nom"> </td></tr>
+<tr><td>Prenom: 		</td><td><input type="text" class="inpt" required pattern="[A-Za-z ']{3,25}" name="prenom"></td></tr>
+<tr><td>Email: 			</td><td><input type="email" class="inpt" required name="email"></td></tr>
+<tr><td>code postal: 	</td><td><input type="text" class="inpt" required pattern="[0-9]{4}"name="code"></td></tr>
+<tr><td>Mot de Passe: 	</td><td><input type="password" class="inpt" required name="password"></td></tr>
+<tr><td>Repeter mot de passe: </td><td><input type="password" class="inpt" required name="password2"></td></tr>
+<tr><td>Age:			</td><td><input type="number" min="18" max="65" class="inpt" required name="age"></td></tr>
+<tr><td>Date naissance:	</td><td><input type="date" min="18" max="65" class="inpt" required name="age"></td></tr>
+<tr><td>Redoublement: 	</td><td><input type="radio" name="redouble">oui<br>
+				        <input type="radio" name="redouble">non</td></tr>
+
+<tr><td>Faculte: 		</td><td><select class="inpt" rrequired name="fac">
+<option value="ENIG">ENIG<br><br>
+<option value="FSG" >FSG<br><br>
+<option value="ISG" >ISG<br><br>
+</select><br><br>
+
+<tr><td><input type="checkbox" name="accept">J'ai lu et accepte:</td></tr>
+<tr><td><input type="submit" class="bt" name="valider" value="Valider"></td><td><input type="reset" class="rs" name="vider" value="Vider"></td></tr>
+</table>
+</form>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

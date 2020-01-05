@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+
+<title>Hichem Lamine Premier test CSS</title>
+
+<style>
+
+<h4>{
+	color:red;
+}
+</style>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="angular.min.js"></script>
+</head>
+<body ng-app="">
+
+
+<form>
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+    
+    </div>
+    <div class="col-sm">
+   <table class="table">	
+<tr><td colspan="2">	<h1>inscription de {{nom+' '+prenom}}</h1></td></tr>
+<tr><td>Nom: 			</td><td><input type="text" ng-model="nom"  name="nom"> </td></tr>
+<tr><td>Prenom: 		</td><td><input type="text"  ng-model="prenom" required pattern="[A-Za-z ']{3,25}" name="prenom"></td></tr>
+<tr><td>Email: 			</td><td><input type="email"  required name="email"></td></tr>
+<tr><td>code postal: 	</td><td><input type="text" maxlength="4" ng-model="cp" required name="code">{{4-cp.length}}</td></tr>
+<tr><td>Mot de Passe: 	</td><td><input type="password" ng-model="mdp" required name="password"></td></tr>
+<tr><td>Repeter mot de passe: </td><td><input type="password" ng-model="rmdp" class="form-control" required name="password2"></td></tr>
+<span ng-show="mdp!=rmdp"><h4>Les mots de passes ne correspondent plus</h4></span>
+<tr><td>Age:			</td><td><input type="number" min="18" max="65" class="form-control" required name="age"></td></tr>
+<tr><td>Date naissance:	</td><td><input type="date" min="18" max="65" class="form-control" required name="age"></td></tr>
+<tr><td>Redoublement: 	</td><td><input type="radio" name="redouble">oui<br>
+				        <input type="radio" name="redouble">non</td></tr>
+
+<tr><td>Faculte: 		</td><td><select class="form-control" required name="fac">
+<option value="ENIG">ENIG<br><br>
+<option value="FSG" >FSG<br><br>
+<option value="ISG" >ISG<br><br>
+</select><br><br>
+
+<tr><td><input type="checkbox" ng-model="lu" name="accept">J'ai lu et accepte:</td></tr>
+<tr><td><input type="submit" ng-disable="!lu" class="btn btn-primary" name="valider" value="Valider"></td><td><input type="reset" class="btn btn-warning" name="vider" value="Vider"></td></tr>
+</table>
+
+    </div>
+    <div class="col-sm">
+     
+    </div>
+  </div>
+</div>
+
+
+
+
+</form>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
